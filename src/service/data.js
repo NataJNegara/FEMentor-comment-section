@@ -101,7 +101,7 @@ export const createReplies = async (comments, content, commentId) => {
       currentItem.replies.push({
         // todo
         id: Math.random().toString(36).substr(2, 9),
-        content: `@${currentItem.user.username} ${content}`,
+        content: `${content}`,
         createdAt: new Date().toISOString(),
         score: 0,
         replyingTo: currentItem.user.username,
@@ -122,7 +122,7 @@ export const createReplies = async (comments, content, commentId) => {
           currentItem.replies.push({
             // todo
             id: Math.random().toString(36).substr(2, 9),
-            content: `@${currentReplies.user.username} ${content}`,
+            content: `${content}`,
             createdAt: new Date().toISOString(),
             score: 0,
             replyingTo: currentReplies.user.username,

@@ -99,7 +99,12 @@ export default function Comment({
               )}
             </div>
             {!isEditing && (
-              <p className="pr-2 text-grayish-blue">{comment.content}</p>
+              <p className="pr-2 text-grayish-blue">
+                <span className="font-bold text-moderate-blue">
+                  {comment.replyingTo ? "@" + comment.replyingTo : ""}
+                </span>
+                <span> {comment.content}</span>
+              </p>
             )}
             {isEditing && (
               <CommentForm
